@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgd6k6qo1jfxx"]
+
+[ext_resource type="Script" uid="uid://banwqkyra4jk8" path="res://multiplayerController.gd" id="1_ixi2m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ixi2m")
+
+[node name="host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 57.0
+offset_right = 413.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 50
+text = "Host"
+
+[node name="join" type="Button" parent="."]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 57.0
+offset_right = 885.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 50
+text = "Join"
+
+[node name="startGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 280.0
+offset_right = 640.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 50
+text = "Start Game"
+
+[node name="lineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 455.0
+offset_right = 709.0
+offset_bottom = 577.0
+
+[node name="label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 474.0
+offset_right = 256.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 50
+text = "Name"
+
+[connection signal="pressed" from="host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="startGame" to="." method="_on_start_game_pressed"]
